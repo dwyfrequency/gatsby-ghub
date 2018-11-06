@@ -18,7 +18,7 @@ class Main extends React.Component {
       <>
         <h1>Your Main App</h1>
         <ul>
-          <li>API: {getUser().api.apiURL}</li>
+          <li>API: {getUser().api && getUser().api.apiURL}</li>
           <li>ID: {getUser().id}</li>
         </ul>
         <hr />
