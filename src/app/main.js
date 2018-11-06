@@ -14,12 +14,13 @@ class Main extends React.Component {
 
   render() {
     const { loading, json } = this.state
+    const user = getUser()
     return (
       <>
         <h1>Your Main App</h1>
         <ul>
-          <li>API: {getUser().api && getUser().api.apiURL}</li>
-          <li>ID: {getUser().id}</li>
+          <li>API: {user.api && user.api.apiURL}</li>
+          <li>ID: {user.id}</li>
         </ul>
         <hr />
 

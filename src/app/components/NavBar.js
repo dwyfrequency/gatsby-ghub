@@ -4,8 +4,10 @@ import { getUser, isLoggedIn, logout } from '../services/auth'
 
 export default () => {
   const content = { message: '', login: true }
+  const user = getUser()
   if (isLoggedIn()) {
-    content.message = `Hello, ${getUser().user_metadata.full_name}`
+    content.message = `Hello, ${user.user_metadata &&
+      user.user_metadata.full_name}`
   } else {
     content.message = 'You are not logged in'
   }
