@@ -6,8 +6,6 @@ import Profile from './profile'
 import Main from './main'
 import PrivateRoute from './components/PrivateRoute'
 import Login from './login'
-// import { Link } from 'gatsby'
-// import { getUser, isLoggedIn } from './services/auth'
 
 const App = () => {
   return (
@@ -27,14 +25,4 @@ function PublicRoute(props) {
   return <div>{props.children}</div>
 }
 
-// {user &&
-//   user.user_metadata && (
-//     <>
-//       <h1>Hi {user.user_metadata.full_name}</h1>
-//       <p>
-//         You are logged in, so check your{' '}
-//         <Link to="/app/profile">profile</Link>
-//       </p>
-//     </>
-//   )}
 export default App

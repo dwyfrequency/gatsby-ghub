@@ -1,9 +1,9 @@
 import netlifyIdentity from 'netlify-identity-widget'
 
-// helpful for debugging
-const logAuth = process.env.NODE_ENV === 'development' && true
+// helpful for debugging netlify identity
+const logAuth = process.env.NODE_ENV === 'development' && false // set to true to turn on logging
 const clog = (...args) => logAuth && console.log(...args)
-// helpful for debugging
+// helpful for debugging netlify identity
 
 export const isBrowser = () => typeof window !== 'undefined'
 export const initAuth = () => {
