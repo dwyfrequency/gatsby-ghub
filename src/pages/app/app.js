@@ -6,7 +6,7 @@ import Profile from './profile'
 import Main from './main'
 import PrivateRoute from './components/PrivateRoute'
 import Login from './login'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 // import { getUser, isLoggedIn } from './services/auth'
 
 const App = () => {

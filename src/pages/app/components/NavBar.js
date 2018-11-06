@@ -23,6 +23,8 @@ export default () => {
 
       <nav>
         <span>Navigate the app: </span>
+        <Link to="/app/">Main</Link>
+        {` `}
         <Link to="/app/profile">Profile</Link>
         {` `}
         {isLoggedIn() ? (
