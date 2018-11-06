@@ -52,6 +52,12 @@ class IndexPage extends React.Component {
                 </a>
               </li>
               <li>
+                or see{' '}
+                <a href="https://youtu.be/bueXJInQt2c">
+                  the Youtube walkthrough
+                </a>
+              </li>
+              <li>
                 or
                 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/jamstack-hackathon-starter">
                   <img
