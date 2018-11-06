@@ -47,7 +47,10 @@ class IndexPage extends React.Component {
               </li>
             </ul>
             <hr />
-            <p>You can still access the </p>
+            <p>
+              You can still access Netlify functions even on static "marketing
+              pages":{' '}
+            </p>
             <button onClick={this.handleClick}>
               {loading ? 'Loading...' : 'Call Lambda Function'}
             </button>
