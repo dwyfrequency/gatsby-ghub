@@ -82,7 +82,13 @@ class IndexPage extends React.Component {
                 : 'click the button and watch this!'}
             </span>
           </div>
-          <div>
+          <div
+            style={{
+              borderLeft: 'brown',
+              borderLeftStyle: 'dashed',
+              paddingLeft: '3rem',
+            }}
+          >
             <p>Now go build something great.</p>
             <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
               <Image />
