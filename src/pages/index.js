@@ -45,6 +45,21 @@ class IndexPage extends React.Component {
                 authentication:{' '}
                 <Link to="/app/">Go to App (with Netlify Identity)</Link>{' '}
               </li>
+              <li>
+                You can{' '}
+                <a href="https://github.com/sw-yx/jamstack-hackathon-starter">
+                  view source here
+                </a>
+              </li>
+              <li>
+                or
+                <a href="https://app.netlify.com/start/deploy?repository=https://github.com/sw-yx/jamstack-hackathon-starter">
+                  <img
+                    src="https://www.netlify.com/img/deploy/button.svg"
+                    alt="Deploy to Netlify"
+                  />
+                </a>
+              </li>
             </ul>
             <hr />
             <p>
