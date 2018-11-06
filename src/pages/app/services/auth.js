@@ -38,6 +38,7 @@ export const handleLogin = callback => {
 }
 
 export const isLoggedIn = () => {
+  if (!isBrowser()) return false
   // const user = getUser()
   const user = netlifyIdentity.currentUser()
   clog('isLoggedIn check', { user })
