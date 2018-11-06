@@ -15,15 +15,15 @@ const App = () => {
       <NavBar />
       <Router>
         <PrivateRoute path="/app/profile" component={Profile} />
-        <Route path="/app">
-          <Main path="/" />
+        <PublicRoute path="/app">
+          <PrivateRoute path="/" component={Main} />
           <Login path="/login" />
-        </Route>
+        </PublicRoute>
       </Router>
     </Layout>
   )
 }
-function Route(props) {
+function PublicRoute(props) {
   return <div>{props.children}</div>
 }
 
