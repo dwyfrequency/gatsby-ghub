@@ -1,7 +1,7 @@
 import netlifyIdentity from 'netlify-identity-widget'
 
 // helpful for debugging
-const logAuth = true
+const logAuth = process.env.NODE_ENV === 'development' && true
 const clog = (...args) => logAuth && console.log(...args)
 // helpful for debugging
 
