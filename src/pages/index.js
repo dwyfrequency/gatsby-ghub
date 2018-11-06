@@ -31,17 +31,23 @@ class IndexPage extends React.Component {
           }}
         >
           <div>
-            <p>Welcome to your new Gatsby site with Netlify functions</p>
-            <br />
+            <p>
+              Welcome to your new Gatsby + Netlify Functions + Netlify Identity
+              site
+            </p>
             <ul>
               <li>
-                <Link to="/page-2/">Go to page 2</Link>
+                This site has statically generated marketing pages like this one
+                and <Link to="/page-2/">page 2.</Link>{' '}
               </li>
               <li>
-                <Link to="/app/">Go to App (with Netlify Identity)</Link>
+                It also has a dynamically generated clientside app guarded by
+                authentication:{' '}
+                <Link to="/app/">Go to App (with Netlify Identity)</Link>{' '}
               </li>
             </ul>
             <hr />
+            <p>You can still access the </p>
             <button onClick={this.handleClick}>
               {loading ? 'Loading...' : 'Call Lambda Function'}
             </button>

@@ -27,7 +27,7 @@ class Main extends React.Component {
         <button onClick={this.handleClick}>
           {loading ? 'Loading...' : 'Call Lambda Function'}
         </button>
-        <pre>{JSON.stringify(json)}</pre>
+        <pre>{JSON.stringify(json, null, 2)}</pre>
       </>
     )
   }
