@@ -3,51 +3,36 @@ import { navigate } from 'gatsby'
 import { handleLogin, isLoggedIn } from './services/auth'
 
 class Login extends React.Component {
-  state = {
-    username: ``,
-    password: ``,
-  }
-
-  handleUpdate = event => {
-    this.setState({
-      [event.target.name]: event.target.value,
+  // state = { redirectToReferrer: false }
+  handleSubmit = () => {
+    handleLogin(user => {
+      console.log({ user })
+      // this.setState({ redirectToReferrer: true })
+      navigate(`/app/profile`)
     })
-  }
-
-  handleSubmit = event => {
-    event.preventDefault()
-    handleLogin(this.state)
   }
 
   render() {
     if (isLoggedIn()) {
-      navigate(`/app/profile`)
+      // navigate(`/app/profile`)
     }
+
+    // let { from } = this.props.location.state || { from: { pathname: '/' } }
+    // let { redirectToReferrer } = this.state
+
+    // if (redirectToReferrer) return <Redirect to={from} />
 
     return (
       <>
         <h1>Log in</h1>
-        <form
-          method="post"
-          onSubmit={event => {
-            this.handleSubmit(event)
-            navigate(`/app/profile`)
+        <button
+          onClick={() => {
+            this.handleSubmit()
+            // navigate(`/app/profile`)
           }}
         >
-          <label>
-            Username
-            <input type="text" name="username" onChange={this.handleUpdate} />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              onChange={this.handleUpdate}
-            />
-          </label>
-          <input type="submit" value="Log In" />
-        </form>
+          log in
+        </button>
       </>
     )
   }

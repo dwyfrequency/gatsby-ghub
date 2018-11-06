@@ -5,6 +5,10 @@ import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
 
+import netlifyIdentity from 'netlify-identity-widget'
+import { initAuth } from './app/services/auth'
+initAuth()
+
 class IndexPage extends React.Component {
   state = { loading: false, msg: 'click the button and watch this!' }
   handleClick = e => {
