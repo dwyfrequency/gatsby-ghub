@@ -2,7 +2,7 @@ var proxy = require('http-proxy-middleware')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby + Netlify Functions + Netlify Identity',
+    title: 'JAMstack Hackathon Starter',
     description: `Kick off your next, great Gatsby app.`,
     author: `@swyx`,
   },
