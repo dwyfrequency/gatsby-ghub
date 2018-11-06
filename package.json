@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-netlify-hackathon-starter",
-  "description": "Gatsby Netlify Hackathon starter",
+  "name": "jamstack-hackathon-starter",
+  "description": "A starter to make JAMstack apps, not just sites with Gatsby + Netlify Functions + Netlify Identity",
   "version": "1.0.0",
   "author": "swyx <swyx@dontemailme.com>",
   "dependencies": {
@@ -41,9 +41,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sw-yx/gatsby-starter-netlify-stack"
+    "url": "https://github.com/sw-yx/jamstack-hackathon-starter"
   },
   "bugs": {
-    "url": "https://github.com/sw-yx/gatsby-starter-netlify-stack/issues"
+    "url": "https://github.com/sw-yx/jamstack-hackathon-starter/issues"
   }
 }
