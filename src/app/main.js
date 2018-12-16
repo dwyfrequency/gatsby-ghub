@@ -5,9 +5,15 @@ class Main extends React.Component {
   state = { loading: false, json: null }
   handleClick = e => {
     e.preventDefault()
-
+    const user = getUser()
     this.setState({ loading: true })
-    fetch('/.netlify/functions/auth-hello')
+    fetch('/.netlify/functions/auth-hello', {
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + user.token.access_token,
+      },
+    })
       .then(response => response.json())
       .then(json => this.setState({ loading: false, json }))
   }
