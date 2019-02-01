@@ -2,6 +2,12 @@
 
 This is a fork of https://github.com/gatsbyjs/gatsby-starter-default which shows how to use Netlify Identity and Netlify Functions with Gatsby. Start here for your next JAMstack hackathon or use this as a reference implementation.
 
+<marquee>
+  <a href="https://app.netlify.com/sites/jamstack-hackathon-starter/deploys">
+<img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/7be76523-4643-4ce9-a6fd-a103463b62f3/deploy-status" />
+  </a>
+</marquee>
+
 ## 3 minute video walkthrough
 
 [![walkthru](https://img.youtube.com/vi/bueXJInQt2c/1.jpg)](https://www.youtube.com/watch?v=bueXJInQt2c)
