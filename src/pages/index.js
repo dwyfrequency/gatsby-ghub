@@ -9,16 +9,6 @@ import { initAuth } from '../app/services/auth'
 initAuth()
 
 class IndexPage extends React.Component {
-  state = { loading: false, msg: null }
-  handleClick = e => {
-    e.preventDefault()
-
-    this.setState({ loading: true })
-    fetch('/.netlify/functions/hello')
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
-
   render() {
     const { loading, msg } = this.state
     return (
