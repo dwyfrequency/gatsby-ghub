@@ -5,15 +5,6 @@ import { FaAlignRight } from 'react-icons/fa'
 import styles from '../css/navbar.module.css'
 import links from '../constants/links'
 
-// const NavList = styled.ul`
-//   display: flex;
-//   justify-content: flex-end;
-//   a {
-//     color: white;
-//     text-decoration: none;
-//   }
-// `
-
 const Header = ({ siteTitle }) => {
   const [isCollapsed, toggleCollapsed] = useState(false)
 
