@@ -1,3 +1,6 @@
+.navbar {
+  background: var(--primaryColor);
+}
 .nav-header {
   display: flex;
   justify-content: space-between;
@@ -13,7 +16,7 @@
   cursor: pointer;
 }
 .logo-icon {
-  color: var(--primaryColor);
+  color: gold;
   font-size: 1.5rem;
 }
 .brand-links {
@@ -22,8 +25,8 @@
 .brand {
   padding: 1rem 1.25rem;
   margin: 0;
-  color: var(--mainBlack);
-  border: 1px solid var(--primaryColor);
+  color: #fff;
+  border: 1px solid gold;
 }
 
 .nav-links {
@@ -40,13 +43,13 @@
   padding: 1rem 1.25rem;
   text-decoration: none;
   text-transform: capitalize;
-  color: var(--mainBlack);
+  color: #fff;
   transition: var(--mainTransition);
   font-weight: bold;
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: gold;
 }
 
 @media screen and (min-width: 576px) {
@@ -67,6 +70,7 @@
     align-items: center;
   }
   .nav-links {
+    margin: auto 0;
     height: auto;
     display: flex;
   }
