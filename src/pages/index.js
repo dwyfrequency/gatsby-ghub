@@ -48,39 +48,9 @@ class IndexPage extends React.Component {
                   </li>
                 </ul>
               </li>
-              <li>
-                You can{' '}
-                <a href="https://github.com/sw-yx/jamstack-hackathon-starter">
-                  view source here
-                </a>
-              </li>
             </ul>
             <hr />
-            <p>
-              You can still access Netlify functions even on static "marketing
-              pages":{' '}
-            </p>
-            <button onClick={this.handleClick}>
-              {loading ? 'Loading...' : 'Call Lambda Function'}
-            </button>
             <br />
-            <pre>
-              {msg
-                ? 'Here is the response: ' + msg
-                : 'click the button and watch this!'}
-            </pre>
-          </div>
-          <div
-            style={{
-              borderLeft: 'brown',
-              borderLeftStyle: 'dashed',
-              paddingLeft: '3rem',
-            }}
-          >
-            <p>Now go build something great.</p>
-            <div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
-              <Image />
-            </div>
           </div>
         </div>
       </Layout>
