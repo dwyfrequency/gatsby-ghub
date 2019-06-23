@@ -10,6 +10,11 @@ const Link = styled.a`
   transition: 175ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
   text-decoration: none;
   font-size: 14;
+  padding: 2px;
+  margin: 2px;
+  :last-child {
+    padding: 12px;
+  }
 `
 
 const Footer = () => {
@@ -27,12 +32,17 @@ const Footer = () => {
       }
     }
   `)
-  console.log(data.github)
+
   const { name, url, stargazers } = data.github.repository
-  console.log(name, url, stargazers)
+
   return (
-    <div style={{ marginTop: 'auto' }}>
-      Footer
+    <div
+      style={{
+        marginTop: 'auto',
+        padding: '1rem',
+        borderTop: '1px solid grey',
+      }}
+    >
       <Link href={url} rel="noopener noreferrer" target="_blank">
         <FaGithub
           size={16}
@@ -41,6 +51,7 @@ const Footer = () => {
             verticalAlign: 'sub',
           }}
         />
+        <span>Source on Github</span>
       </Link>
       <Link
         href={`${url}/stargazers`}
@@ -52,7 +63,6 @@ const Footer = () => {
         </strong>
         <MdStar css={{ verticalAlign: 'sub' }} size={16} />
       </Link>
-      <span>Source on Github</span>
     </div>
   )
 }
