@@ -80,6 +80,7 @@ export const query = graphql`
               stargazers {
                 totalCount
               }
+              forkCount
             }
           }
         }
