@@ -26,10 +26,11 @@ const Resume2 = ({ resumeDetails }) => {
     location,
     repositories,
     repositoriesContributedTo,
-  } = resumeDetails
-  console.log('repo', repositories)
-  console.log('pinned', pinnedItems)
-  console.log('repositoriesContributedTo', repositoriesContributedTo)
+  } = resumeDetails.github.user
+  // console.log('repo', repositories)
+  // console.log('pinned', pinnedItems)
+  // console.log('repositoriesContributedTo', repositoriesContributedTo)
+
   return (
     <Showcase>
       <>

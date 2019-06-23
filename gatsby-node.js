@@ -55,86 +55,10 @@ exports.createPages = async ({ actions, graphql }) => {
       github {
         organization(login: "FullstackAcademy") {
           team(slug: "1904-fsa-ny") {
-            members(first: 1) {
+            members(first: 5) {
               edges {
                 node {
-                  avatarUrl
-                  bio
-                  location
-                  email
                   login
-                  name
-                  websiteUrl
-                  contributionsCollection {
-                    totalCommitContributions
-                  }
-                  repositories(last: 5) {
-                    edges {
-                      node {
-                        id
-                        url
-                        name
-                        primaryLanguage {
-                          name
-                          color
-                        }
-                        updatedAt
-                        owner {
-                          login
-                        }
-                        stargazers {
-                          totalCount
-                        }
-                        forkCount
-                      }
-                    }
-                  }
-                  repositoriesContributedTo(last: 5) {
-                    totalCount
-                    edges {
-                      node {
-                        id
-                        url
-                        name
-                        primaryLanguage {
-                          name
-                          color
-                        }
-                        updatedAt
-                        owner {
-                          login
-                        }
-                        stargazers {
-                          totalCount
-                        }
-                        forkCount
-                      }
-                    }
-                  }
-                  pinnedItems(first: 6) {
-                    totalCount
-                    edges {
-                      node {
-                        ... on GitHub_Repository {
-                          id
-                          url
-                          name
-                          primaryLanguage {
-                            name
-                            color
-                          }
-                          updatedAt
-                          owner {
-                            login
-                          }
-                          stargazers {
-                            totalCount
-                          }
-                          forkCount
-                        }
-                      }
-                    }
-                  }
                 }
               }
             }
@@ -145,7 +69,7 @@ exports.createPages = async ({ actions, graphql }) => {
   `)
   console.log('>>>>>>>>>>', data)
   data.github.organization.team.members.edges.forEach(({ node }) =>
-    console.log('>>>>>>>>>>', node.login, node.name)
+    console.log('>>>>>>>>>>', node.login)
   )
 
   data.github.organization.team.members.edges.forEach(({ node }) => {
@@ -153,7 +77,7 @@ exports.createPages = async ({ actions, graphql }) => {
       path: `resumes/${node.login}`,
       component: path.resolve(`./src/templates/UserPageGh.js`),
       context: {
-        resumeDetails: node,
+        username: node.login,
       },
     })
   })
