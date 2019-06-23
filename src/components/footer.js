@@ -1,20 +1,22 @@
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { graphql, StaticQuery } from 'gatsby'
-
-// const query = graphql`
-//   query FooterQuery {
-//     github {
-//       repository(owner: "dwyfrequency", name: "gatsby-ghub") {
-//         stargazers {
-//           totalCount
-//         }
-//       }
-//     }
-//   }
-// `
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Footer = () => {
+  // const data = useStaticQuery(graphql`
+  //   query FooterQuery {
+  //     repository(owner: "dwyfrequency", name: "gatsby-ghub") {
+  //       id
+  //       name
+  //       stargazers {
+  //         totalCount
+  //       }
+  //       url
+  //     }
+  //   }
+  // `)
+  // console.log(data)
+
   return (
     <div style={{ marginTop: 'auto' }}>
       Footer
