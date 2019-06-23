@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaGithub } from 'react-icons/fa'
-import { MdStar } from 'react-icons/md'
+import { GoStar } from 'react-icons/go'
 import { graphql, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
@@ -58,10 +58,11 @@ const Footer = () => {
         rel="noopener noreferrer"
         target="_blank"
       >
+        <GoStar css={{ verticalAlign: 'sub' }} size={16} />
         <strong css={{ fontWeight: 'normal', marginRight: 2 }}>
+          {' '}
           {stargazers.totalCount}
         </strong>
-        <MdStar css={{ verticalAlign: 'sub' }} size={16} />
       </Link>
     </div>
   )

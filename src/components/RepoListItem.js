@@ -1,5 +1,5 @@
 import React from 'react'
-import { MdStar } from 'react-icons/md'
+import { GoStar } from 'react-icons/go'
 import styled from 'styled-components'
 
 const Card = styled.div`
@@ -47,7 +47,7 @@ const RepoListItem = ({ repoDetails }) => {
       <ul>
         <li>{primaryLanguage ? primaryLanguage.name : 'JavaScript'}</li>
         <li>
-          <MdStar css={{ verticalAlign: 'sub', color: 'gold' }} size={20} />{' '}
+          <GoStar css={{ verticalAlign: 'sub', color: 'gold' }} size={20} />{' '}
           {totalCount}
         </li>
       </ul>
