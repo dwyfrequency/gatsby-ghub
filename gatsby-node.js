@@ -12,43 +12,7 @@
 const path = require(`path`)
 
 exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions // const response = await graphql(`
-  //   query {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-  // const response = await graphql(`
-  //   {
-  //     github {
-  //       organization(login: "FullstackAcademy") {
-  //         membersWithRole(first: 1) {
-  //           edges {
-  //             node {
-  //               login
-  //             }
-  //             cursor
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-  // const response = await graphql(`
-  //   {
-  //     github {
-  //       user(login: "dwyfrequency") {
-  //         login
-  //       }
-  //     }
-  //   }
-  // `)
-
-  // console.log('>>>>>>>>>>', response)
-  // console.log('>>>>>>>>>>', response.data.github.user.login)
+  const { createPage } = actions
 
   const { data } = await graphql(`
     query {
@@ -67,10 +31,6 @@ exports.createPages = async ({ actions, graphql }) => {
       }
     }
   `)
-  console.log('>>>>>>>>>>', data)
-  data.github.organization.team.members.edges.forEach(({ node }) =>
-    console.log('>>>>>>>>>>', node.login)
-  )
 
   data.github.organization.team.members.edges.forEach(({ node }) => {
     createPage({

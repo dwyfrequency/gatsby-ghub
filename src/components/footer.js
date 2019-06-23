@@ -33,7 +33,7 @@ const Footer = () => {
     }
   `)
 
-  const { name, url, stargazers } = data.github.repository
+  const { url, stargazers } = data.github.repository
 
   return (
     <div

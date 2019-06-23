@@ -21,7 +21,7 @@ export default () => {
           <ul>
             <li>
               This site has statically generated marketing pages like this one
-              and <Link to="/page-2/">page 2.</Link>{' '}
+              and <Link to="/resume-book/">page 2.</Link>{' '}
             </li>
             <li>
               It also has a dynamically generated clientside app guarded by

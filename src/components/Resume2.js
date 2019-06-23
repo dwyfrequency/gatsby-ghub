@@ -37,7 +37,7 @@ const Resume2 = ({ resumeDetails }) => {
         <h2>Resume</h2>
         <img
           src={avatarUrl}
-          alt="avatar image"
+          alt="avatar"
           style={{ width: 350, height: 350, borderRadius: 6 }}
         />
         <h2>{name}</h2>
