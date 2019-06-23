@@ -109,7 +109,7 @@ const Resume = () => {
     repositories,
     repositoriesContributedTo,
   } = data.github.organization.team.members.edges[0].node
-  console.log(avatarUrl)
+  console.log(location)
   return (
     <>
       <Showcase>
@@ -133,12 +133,14 @@ const Resume = () => {
         <ul>
           <li>Bio: {bio || 'Software Engineer'}</li>
           <li>Total Commits: {totalCommitContributions}</li>
+          <hr />
+          <ul>
+            <li>Location: {location || 'New York'}</li>
+            <li>Email: {email || 'userhasnoemail@me.com'}</li>
+          </ul>
         </ul>
       </Showcase>
 
-      <hr />
-      {location || 'New York'}
-      {email || 'userhasnoemail@me.com'}
       <hr />
       <RepoList title="Contributed to" repos={repositoriesContributedTo} />
       <hr />
