@@ -92,7 +92,6 @@ export const query = graphql`
 const UserPageGh = ({ data }) => {
   return (
     <Layout>
-      <div>UserPageTemplate</div>
       <Resume2 resumeDetails={data} />
     </Layout>
   )

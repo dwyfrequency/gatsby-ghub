@@ -3,8 +3,8 @@ import { GoStar, GoRepoForked } from 'react-icons/go'
 import styled from 'styled-components'
 
 const Card = styled.div`
-  width: 80vh;
-  height: 100px;
+  width: 400px;
+  height: 120px;
   background-color: rgb(34, 17, 51);
   border-radius: 4px;
   padding: 1rem;
