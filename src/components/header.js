@@ -37,9 +37,7 @@ const Header = ({ siteTitle }) => {
         >
           {links.map(({ path, text }) => (
             <li key={text}>
-              <Link fade to={path}>
-                {text}
-              </Link>
+              <Link to={path}>{text}</Link>
             </li>
           ))}
         </ul>
