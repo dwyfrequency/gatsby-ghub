@@ -20,7 +20,7 @@ const ListContainer = styled.div`
   justify-content: center;
   flex-flow: wrap;
   a {
-    color: #fff !important;
+    color: #fff;
     text-decoration: none;
   }
 `
@@ -48,10 +48,8 @@ const SecondPage = ({ data }) => {
   console.log(data)
   return (
     <Layout>
-      <SEO title="Page two" />
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
-      <Link to="/">Go back to the homepage</Link>
+      <SEO title="Resume Book" />
+      <h1 style={{ textAlign: 'center' }}>FullStack Resume Book</h1>
       <ListContainer>
         {data.github.organization.team.members.edges.map(({ node }) => (
           <Link to={`/resumes/${node.login}`}>
