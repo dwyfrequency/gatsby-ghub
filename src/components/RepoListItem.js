@@ -19,6 +19,7 @@ const Card = styled.div`
   }
   ul {
     display: flex;
+    justify-content: center;
     margin-left: 2px;
   }
   li {

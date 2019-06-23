@@ -111,8 +111,8 @@ const Resume = () => {
   } = data.github.organization.team.members.edges[0].node
   console.log(location)
   return (
-    <>
-      <Showcase>
+    <Showcase>
+      <>
         <h2>Resume</h2>
         <img
           src={avatarUrl}
@@ -139,7 +139,7 @@ const Resume = () => {
             <li>Email: {email || 'userhasnoemail@me.com'}</li>
           </ul>
         </ul>
-      </Showcase>
+      </>
 
       <hr />
       <RepoList title="Contributed to" repos={repositoriesContributedTo} />
@@ -148,7 +148,7 @@ const Resume = () => {
         title="Personal Repos"
         repos={pinnedItems.edges.length ? pinnedItems : repositories}
       />
-    </>
+    </Showcase>
   )
 }
 
