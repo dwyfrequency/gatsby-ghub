@@ -1,37 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { getUser } from './services/auth'
+import Form from './components/Form'
 
-class Main extends React.Component {
-  state = { loading: false, json: null }
-  handleClick = e => {
-    e.preventDefault()
-    const user = getUser()
-    this.setState({ loading: true })
-    fetch('/.netlify/functions/auth-hello', {
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer ' + user.token.access_token,
-      },
-    })
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, json }))
-  }
-
-  render() {
-    const { loading, json } = this.state
-    const user = getUser()
-    return (
-      <>
-        <h1>Your Main App</h1>
-        <ul>
-          <li>API: {user.api && user.api.apiURL}</li>
-          <li>ID: {user.id}</li>
-        </ul>
-        <hr />
-      </>
-    )
-  }
+const Main = () => {
+  const [ghUsername, setGhUsername] = useState('')
+  const user = getUser()
+  return (
+    <>
+      <h1>Your Main App</h1>
+      <ul>
+        <li>API: {user.api && user.api.apiURL}</li>
+        <li>ID: {user.id}</li>
+      </ul>
+      <hr />
+      <Form setGhUsername={setGhUsername} />
+      <p>ghUsername: {ghUsername}</p>
+    </>
+  )
 }
 
 export default Main
