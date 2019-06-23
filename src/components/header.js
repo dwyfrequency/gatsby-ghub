@@ -16,7 +16,6 @@ const Header = ({ siteTitle }) => {
     <nav className={styles.navbar}>
       <div className={styles.navCenter}>
         <div className={styles.navHeader}>
-          {/* <img src={logo} alt="backroads logo" /> */}
           <Link to={'/'} className={styles.brandLinks}>
             <h2 className={styles.brand}>{siteTitle}</h2>
           </Link>

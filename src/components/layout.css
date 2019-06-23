@@ -630,6 +630,11 @@ pre tt:before,
 pre tt:after {
   content: '';
 }
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
