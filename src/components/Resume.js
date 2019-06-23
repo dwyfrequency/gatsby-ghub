@@ -124,7 +124,6 @@ const Resume = () => {
     repositories,
     repositoriesContributedTo,
   } = data.github.organization.team.members.edges[0].node
-  console.log(location)
   return (
     <Showcase>
       <>

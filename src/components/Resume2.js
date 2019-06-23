@@ -27,7 +27,9 @@ const Resume2 = ({ resumeDetails }) => {
     repositories,
     repositoriesContributedTo,
   } = resumeDetails
-  console.log(repositories, repositoriesContributedTo)
+  console.log('repo', repositories)
+  console.log('pinned', pinnedItems)
+  console.log('repositoriesContributedTo', repositoriesContributedTo)
   return (
     <Showcase>
       <>
@@ -62,12 +64,11 @@ const Resume2 = ({ resumeDetails }) => {
       <hr />
       <RepoList title="Contributed to" repos={repositoriesContributedTo} />
       <hr />
-      {/*
+
       <RepoList
         title="Personal Repos"
         repos={pinnedItems.edges.length ? pinnedItems : repositories}
       />
-      */}
     </Showcase>
   )
 }
