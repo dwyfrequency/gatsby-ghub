@@ -23,6 +23,7 @@ const query = graphql`
                   edges {
                     node {
                       ... on GitHub_Repository {
+                        id
                         name
                       }
                     }
@@ -34,6 +35,7 @@ const query = graphql`
                 repositories(last: 5) {
                   edges {
                     node {
+                      id
                       url
                       name
                       primaryLanguage {
@@ -54,6 +56,7 @@ const query = graphql`
                   totalCount
                   edges {
                     node {
+                      id
                       url
                       name
                       primaryLanguage {
