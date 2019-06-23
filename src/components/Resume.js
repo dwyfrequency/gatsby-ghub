@@ -26,7 +26,20 @@ const query = graphql`
                     node {
                       ... on GitHub_Repository {
                         id
+                        url
                         name
+                        primaryLanguage {
+                          name
+                          color
+                        }
+                        updatedAt
+                        owner {
+                          login
+                        }
+                        stargazers {
+                          totalCount
+                        }
+                        forkCount
                       }
                     }
                   }
@@ -51,6 +64,7 @@ const query = graphql`
                       stargazers {
                         totalCount
                       }
+                      forkCount
                     }
                   }
                 }
@@ -72,6 +86,7 @@ const query = graphql`
                       stargazers {
                         totalCount
                       }
+                      forkCount
                     }
                   }
                 }

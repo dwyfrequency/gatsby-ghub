@@ -1,5 +1,5 @@
 import React from 'react'
-import { GoStar } from 'react-icons/go'
+import { GoStar, GoRepoForked } from 'react-icons/go'
 import styled from 'styled-components'
 
 const Card = styled.div`
@@ -38,6 +38,7 @@ const RepoListItem = ({ repoDetails }) => {
     name,
     primaryLanguage,
     stargazers: { totalCount },
+    forkCount,
   } = repoDetails
   return (
     <Card>
@@ -49,6 +50,13 @@ const RepoListItem = ({ repoDetails }) => {
         <li>
           <GoStar css={{ verticalAlign: 'sub', color: 'gold' }} size={20} />{' '}
           {totalCount}
+        </li>
+        <li>
+          <GoRepoForked
+            css={{ verticalAlign: 'sub', color: 'gold' }}
+            size={20}
+          />
+          {forkCount}
         </li>
       </ul>
     </Card>
