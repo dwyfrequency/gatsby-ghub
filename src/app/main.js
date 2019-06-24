@@ -18,6 +18,30 @@ const GET_USER = gql`
       contributionsCollection {
         totalCommitContributions
       }
+      pinnedItems(first: 6) {
+        totalCount
+        edges {
+          node {
+            ... on Repository {
+              id
+              url
+              name
+              primaryLanguage {
+                name
+                color
+              }
+              updatedAt
+              owner {
+                login
+              }
+              stargazers {
+                totalCount
+              }
+              forkCount
+            }
+          }
+        }
+      }
       repositories(last: 5) {
         edges {
           node {
