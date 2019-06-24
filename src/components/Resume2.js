@@ -14,7 +14,8 @@ const Showcase = styled.div`
   }
 `
 
-const Resume2 = ({ resumeDetails }) => {
+const Resume2 = ({ user }) => {
+  console.log(user)
   const {
     avatarUrl,
     bio,
@@ -26,7 +27,7 @@ const Resume2 = ({ resumeDetails }) => {
     location,
     repositories,
     repositoriesContributedTo,
-  } = resumeDetails.github.user
+  } = user
   // console.log('repo', repositories)
   // console.log('pinned', pinnedItems)
   // console.log('repositoriesContributedTo', repositoriesContributedTo)

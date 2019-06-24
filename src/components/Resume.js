@@ -1,103 +1,7 @@
 import React from 'react'
-import Layout from './layout'
 import { FaGithub } from 'react-icons/fa'
-import { graphql, useStaticQuery } from 'gatsby'
 import RepoList from './RepoList'
 import styled from 'styled-components'
-
-const query = graphql`
-  query {
-    github {
-      organization(login: "FullstackAcademy") {
-        team(slug: "1904-fsa-ny") {
-          members(first: 1) {
-            edges {
-              node {
-                avatarUrl
-                bio
-                location
-                email
-                login
-                name
-                websiteUrl
-                pinnedItems(first: 6) {
-                  totalCount
-                  edges {
-                    node {
-                      ... on GitHub_Repository {
-                        id
-                        url
-                        name
-                        primaryLanguage {
-                          name
-                          color
-                        }
-                        updatedAt
-                        owner {
-                          login
-                        }
-                        stargazers {
-                          totalCount
-                        }
-                        forkCount
-                      }
-                    }
-                  }
-                }
-                contributionsCollection {
-                  totalCommitContributions
-                }
-                repositories(last: 5) {
-                  edges {
-                    node {
-                      id
-                      url
-                      name
-                      primaryLanguage {
-                        name
-                        color
-                      }
-                      updatedAt
-                      owner {
-                        login
-                      }
-                      stargazers {
-                        totalCount
-                      }
-                      forkCount
-                    }
-                  }
-                }
-                repositoriesContributedTo(last: 5) {
-                  totalCount
-                  edges {
-                    node {
-                      id
-                      url
-                      name
-                      primaryLanguage {
-                        name
-                        color
-                      }
-                      updatedAt
-                      owner {
-                        login
-                      }
-                      stargazers {
-                        totalCount
-                      }
-                      forkCount
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 const Showcase = styled.div`
   /* margin: 0 auto; */
@@ -110,8 +14,7 @@ const Showcase = styled.div`
   }
 `
 
-const Resume = () => {
-  const data = useStaticQuery(query)
+const Resume = ({ user }) => {
   const {
     avatarUrl,
     bio,
@@ -123,14 +26,18 @@ const Resume = () => {
     location,
     repositories,
     repositoriesContributedTo,
-  } = data.github.organization.team.members.edges[0].node
+  } = user
+  // console.log('repo', repositories)
+  // console.log('pinned', pinnedItems)
+  // console.log('repositoriesContributedTo', repositoriesContributedTo)
+
   return (
     <Showcase>
       <>
         <h2>Resume</h2>
         <img
           src={avatarUrl}
-          alt="avatar image"
+          alt="avatar"
           style={{ width: 350, height: 350, borderRadius: 6 }}
         />
         <h2>{name}</h2>
@@ -158,9 +65,12 @@ const Resume = () => {
       <hr />
       <RepoList title="Contributed to" repos={repositoriesContributedTo} />
       <hr />
+
       <RepoList
         title="Personal Repos"
-        repos={pinnedItems.edges.length ? pinnedItems : repositories}
+        repos={
+          pinnedItems && pinnedItems.edges.length ? pinnedItems : repositories
+        }
       />
     </Showcase>
   )

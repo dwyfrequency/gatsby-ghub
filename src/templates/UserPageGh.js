@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
-import Resume2 from '../components/Resume2'
+import Resume from '../components/Resume'
 
 export const query = graphql`
   query($username: String!) {
@@ -92,7 +92,7 @@ export const query = graphql`
 const UserPageGh = ({ data }) => {
   return (
     <Layout>
-      <Resume2 resumeDetails={data} />
+      <Resume user={data.github.user} />
     </Layout>
   )
 }
