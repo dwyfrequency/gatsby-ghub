@@ -1,6 +1,6 @@
 import React from 'react'
 import { navigate } from 'gatsby'
-import { handleLogin, isLoggedIn } from './services/auth'
+import { handleLogin } from './services/auth'
 
 class Login extends React.Component {
   handleSubmit = () => handleLogin(user => navigate(`/app/profile`))

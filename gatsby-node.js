@@ -19,7 +19,7 @@ exports.createPages = async ({ actions, graphql }) => {
       github {
         organization(login: "FullstackAcademy") {
           team(slug: "1904-fsa-ny") {
-            members(first: 5) {
+            members(first: 55) {
               edges {
                 node {
                   login

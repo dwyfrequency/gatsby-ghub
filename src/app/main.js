@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { getUser } from './services/auth'
+// import { getUser } from './services/auth'
 import Form from './components/Form'
 import gql from 'graphql-tag'
 import { Query } from 'react-apollo'
@@ -91,14 +91,14 @@ const GET_USER = gql`
 
 const Main = () => {
   const [ghUsername, setGhUsername] = useState('dwyfrequency')
-  const user = getUser()
+  // const user = getUser()
   return (
     <>
-      <h1>Your Main App</h1>
-      <ul>
+      <h1>Non-Static App</h1>
+      {/* <ul>
         <li>API: {user.api && user.api.apiURL}</li>
         <li>ID: {user.id}</li>
-      </ul>
+      </ul> */}
       <hr />
       <Form setGhUsername={setGhUsername} />
       <p>ghUsername: {ghUsername}</p>
