@@ -5,7 +5,7 @@ export const client = new ApolloClient({
   request: operation => {
     operation.setContext({
       headers: {
-        authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        authorization: `Bearer ${process.env.GATSBY_GITHUB_TOKEN}`,
       },
     })
   },
