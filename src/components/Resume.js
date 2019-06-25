@@ -33,34 +33,32 @@ const Resume = ({ user }) => {
 
   return (
     <Showcase>
-      <>
-        <h2>Resume</h2>
-        <img
-          src={avatarUrl}
-          alt="avatar"
-          style={{ width: 350, height: 350, borderRadius: 6 }}
+      <h2>Resume</h2>
+      <img
+        src={avatarUrl}
+        alt="avatar"
+        style={{ width: 350, height: 350, borderRadius: 6 }}
+      />
+      <h2>{name}</h2>
+      <h3>
+        <FaGithub
+          size={25}
+          css={{
+            marginRight: '0.2rem',
+            verticalAlign: 'sub',
+          }}
         />
-        <h2>{name}</h2>
-        <h3>
-          <FaGithub
-            size={25}
-            css={{
-              marginRight: '0.2rem',
-              verticalAlign: 'sub',
-            }}
-          />
-          {login}
-        </h3>
+        {login}
+      </h3>
+      <ul>
+        <li>Bio: {bio || 'Software Engineer'}</li>
+        <li>Total Commits: {totalCommitContributions}</li>
+        <hr />
         <ul>
-          <li>Bio: {bio || 'Software Engineer'}</li>
-          <li>Total Commits: {totalCommitContributions}</li>
-          <hr />
-          <ul>
-            <li>Location: {location || 'New York'}</li>
-            <li>Email: {email || 'userhasnoemail@me.com'}</li>
-          </ul>
+          <li>Location: {location || 'New York'}</li>
+          <li>Email: {email || 'userhasnoemail@me.com'}</li>
         </ul>
-      </>
+      </ul>
 
       <hr />
       <RepoList title="Contributed to" repos={repositoriesContributedTo} />
