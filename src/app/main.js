@@ -96,7 +96,6 @@ const Main = () => {
       <h1>Non-Static App</h1>
       <hr />
       <Form setGhUsername={setGhUsername} />
-      <p>Gatsby Github: {ghUsername}</p>
       <Query query={GET_USER} variables={{ username: ghUsername }}>
         {({ loading, error, data }) => {
           if (loading) return 'Loading...'
