@@ -4,8 +4,13 @@ import RepoList from './RepoList'
 import styled from 'styled-components'
 
 const Showcase = styled.div`
-  /* margin: 0 auto; */
+  margin: 10px auto;
+  width: 80vw;
   text-align: center;
+  background: var(--offWhite);
+  border-radius: 3px;
+  box-shadow: 2px 3px 8px #eee;
+
   h2 {
     margin-bottom: 4px;
   }
@@ -53,11 +58,8 @@ const Resume = ({ user }) => {
       <ul>
         <li>Bio: {bio || 'Software Engineer'}</li>
         <li>Total Commits: {totalCommitContributions}</li>
-        <hr />
-        <ul>
-          <li>Location: {location || 'New York'}</li>
-          <li>Email: {email || 'userhasnoemail@me.com'}</li>
-        </ul>
+        <li>Location: {location || 'New York'}</li>
+        <li>Email: {email || 'userhasnoemail@me.com'}</li>
       </ul>
 
       <hr />
