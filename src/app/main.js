@@ -91,28 +91,16 @@ const GET_USER = gql`
 
 const Main = () => {
   const [ghUsername, setGhUsername] = useState('dwyfrequency')
-  // const user = getUser()
   return (
     <>
       <h1>Non-Static App</h1>
-      {/* <ul>
-        <li>API: {user.api && user.api.apiURL}</li>
-        <li>ID: {user.id}</li>
-      </ul> */}
       <hr />
       <Form setGhUsername={setGhUsername} />
-      <p>ghUsername: {ghUsername}</p>
       <Query query={GET_USER} variables={{ username: ghUsername }}>
         {({ loading, error, data }) => {
           if (loading) return 'Loading...'
           if (error) return `Error! ${error.message}`
-          console.log(data)
-          return (
-            <>
-              <p>{data.user.login}</p>
-              <Resume user={data.user} />
-            </>
-          )
+          return <Resume user={data.user} />
         }}
       </Query>
     </>

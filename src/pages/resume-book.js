@@ -30,7 +30,7 @@ export const query = graphql`
     github {
       organization(login: "FullstackAcademy") {
         team(slug: "1904-fsa-ny") {
-          members(first: 50) {
+          members(first: 53) {
             edges {
               node {
                 id
