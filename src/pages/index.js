@@ -9,12 +9,13 @@ export default () => {
       <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
       <div
         style={{
+          marginTop: '2rem',
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
         }}
       >
         <div>
-          <h2>Static Content Lives Here</h2>
+          <h1 style={{ textAlign: 'center' }}>Static Content Lives Here</h1>
           <ul>
             <li>
               This site has statically generated marketing pages like this one
