@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import Img from '../components/image'
 
 export default () => {
   return (
@@ -33,6 +34,7 @@ export default () => {
             </li>
           </ul>
           <hr />
+          <Img />
           <br />
         </div>
       </div>
