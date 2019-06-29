@@ -10,7 +10,6 @@ export const query = graphql`
         avatarUrl
         bio
         location
-        email
         name
         login
         websiteUrl
