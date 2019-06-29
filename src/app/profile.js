@@ -6,7 +6,12 @@ const Profile = () => {
   return (
     <>
       <h1>Your profile</h1>
-      <ul>
+      <ul
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+        }}
+      >
         <li>E-mail: {user.email}</li>
       </ul>
     </>
