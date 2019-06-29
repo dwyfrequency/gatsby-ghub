@@ -30,7 +30,7 @@ export const query = graphql`
     github {
       organization(login: "FullstackAcademy") {
         team(slug: "1904-fsa-ny") {
-          members(first: 53) {
+          members(first: 5) {
             edges {
               node {
                 id
@@ -45,15 +45,14 @@ export const query = graphql`
 `
 
 const SecondPage = ({ data }) => {
-  console.log(data)
   return (
     <Layout>
       <SEO title="Resume Book" />
       <h1 style={{ textAlign: 'center' }}>FullStack Resume Book</h1>
       <ListContainer>
         {data.github.organization.team.members.edges.map(({ node }) => (
-          <Link to={`/resumes/${node.login}`}>
-            <Card key={node.id}>{node.login}</Card>
+          <Link to={`/resumes/${node.login}`} key={node.id}>
+            <Card>{node.login}</Card>
           </Link>
         ))}
       </ListContainer>
