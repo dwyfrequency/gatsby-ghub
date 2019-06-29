@@ -3,9 +3,6 @@ import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import { initAuth } from '../app/services/auth'
-initAuth()
-
 export default () => {
   return (
     <Layout>
