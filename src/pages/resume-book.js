@@ -48,7 +48,9 @@ const SecondPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Resume Book" />
-      <h1 style={{ textAlign: 'center' }}>FullStack Resume Book</h1>
+      <h1 style={{ textAlign: 'center', marginTop: '2rem' }}>
+        FullStack Resume Book
+      </h1>
       <ListContainer>
         {data.github.organization.team.members.edges.map(({ node }) => (
           <Link to={`/resumes/${node.login}`} key={node.id}>
