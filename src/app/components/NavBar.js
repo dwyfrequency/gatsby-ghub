@@ -12,7 +12,14 @@ export default () => {
     content.message = 'You are not logged in'
   }
   return (
-    <div>
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        background: '#f1defa',
+        padding: '10px',
+      }}
+    >
       <span>{content.message || 'User'}</span>
       <div>
         <span>Navigate the app: </span>
