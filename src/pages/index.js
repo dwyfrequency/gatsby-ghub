@@ -2,9 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-
-import { initAuth } from '../app/services/auth'
-initAuth()
+import Img from '../components/image'
 
 export default () => {
   return (
@@ -13,11 +11,11 @@ export default () => {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
         }}
       >
         <div>
-          <h2>Static Content Lives Here</h2>
+          <h1>Static Content Lives Here</h1>
           <ul>
             <li>
               This site has statically generated marketing pages like this one
@@ -36,6 +34,7 @@ export default () => {
             </li>
           </ul>
           <hr />
+          <Img />
           <br />
         </div>
       </div>
