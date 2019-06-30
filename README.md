@@ -10,6 +10,7 @@ Create the files below in the root of the project:
 * .env.development
 * .env.production
 
+Get a [Personal Github API Token](https://github.com/settings/tokens) 
 
 ## How to start
 
