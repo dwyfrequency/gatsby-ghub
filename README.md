@@ -9,4 +9,4 @@ You can clone and deploy this sample project with one click:
 
 ## Credit
 
-Thank you to the [Gatsby](https://twitter.com/gatsbyjs?lang=en) and [@swyx](https://twitter.com/swyx) for idea and skeleton app. My starter is a fork of https://github.com/sw-yx/jamstack-hackathon-starter which shows how to use Netlify Identity and Netlify Functions with Gatsby. 
+Thank you to the [Gatsby](https://twitter.com/gatsbyjs?lang=en) and [@swyx](https://twitter.com/swyx) for the idea and skeleton app. My starter is a fork of https://github.com/sw-yx/jamstack-hackathon-starter which shows how to use Netlify Identity and Netlify Functions with Gatsby. 
