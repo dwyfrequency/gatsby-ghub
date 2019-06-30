@@ -11,8 +11,8 @@ Create the files below in the root of the project:
 * .env.production
 
 The contents will need to look like 
-GITHUB_TOKEN=INSERTYOURAPITOKENHERE
-GATSBY_GITHUB_TOKEN=SAMETOKENASABOVE
+* GITHUB_TOKEN=INSERTYOURAPITOKENHERE
+* GATSBY_GITHUB_TOKEN=SAMETOKENASABOVE
 
 Get a [Personal Github API Token](https://github.com/settings/tokens) 
 
