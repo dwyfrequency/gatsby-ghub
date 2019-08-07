@@ -1,4 +1,4 @@
-## Make Web Apps with Dyanmic and Static Content Using Gatsby
+## Make Web Apps with Dynamic and Static Content Using Gatsby
 
 To show the proof of concept, I created a section where I statically render resumes for users based off of their github profile. Then in the App section, I used netlify to sign up/manage users, and Apollo client for on demand gql queries to generate resumes.
 
